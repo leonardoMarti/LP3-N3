@@ -31,6 +31,10 @@ Busque por Start Free e configure um cluster em mongo para conectar seu banco(a 
 
 Busque por **.example-env** na raiz do projeto e complete suas variáveis de ambiente.
 
+#### Rodar app:
+
+> nodemon --exec npm start
+
 ### Features
 
 - [x] Importação arquivos .ccv
