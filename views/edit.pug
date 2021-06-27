@@ -1,0 +1,29 @@
+extends layout
+block content
+  <br/>
+  <h2 style='border-bottom: 1px solid #808080; font-weight: 700;'> !{title} </h2>
+  <br/>
+  p#message.alert.alert-success(style='display:none')
+    - var hrefEdit = '/edition/' + _id;
+    <form action=!{hrefEdit} method="post">
+      <div class="mb-3" style="margin-bottom: 10px;">
+        <label for="age" class="form-label">Age:</label>
+        <input type="text" class="form-control" id="age" name="age" value=!{age} maxlength="3" required>
+      </div>
+      <div class="mb-3" style="margin-bottom: 10px;">
+        <label for="sex" class="form-label">Sex:</label>
+        <input type="text" class="form-control" id="sex" name="sex" value=!{sex} maxlength="1" required>
+      </div>
+      <div class="mb-3" style="margin-bottom: 10px;">
+        <label for="cp" class="form-label">Cp:</label>
+        <input type="text" class="form-control" id="cp" name="cp" value=!{cp} maxlength="1" required>
+      </div>
+      <div class="mb-3" style="margin-bottom: 10px;">
+        <label for="trestbps" class="form-label">Trestbps:</label>
+        <input type="text" class="form-control" id="trestbps" name="trestbps" value=!{trestbps} maxlength="3" required>
+      </div>
+      <div class="mb-3" style="margin-bottom: 10px;">
+      <button type="submit" class="btn btn-success">Save</button>
+      <a href='/fetchdata' class='btn btn-danger' id='fetchdata' style='margin-right: 5px'>Cancel</a>
+      </div>
+    </form>
